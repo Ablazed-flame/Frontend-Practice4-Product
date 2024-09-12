@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* ### Primary */
+
+--DarkCyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+/* ### Neutral */
+
+--VeryDarkBlue: hsl(212, 21%, 14%);
+--DarkGrayishBlue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+
+--font-weight-sm:500;
+--font-weight-lg:700;
+}
+
+a{
+    text-decoration: none;
+}
+img,a,input,button{
+    display:block;
+}
+li{
+    list-style: none;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size:14px;
+    font-family: "Montserrat",sans-serif;
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: var(--Cream);
+}
+.wrapper{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width:55rem;
+    background-color: white;
+    border-radius: 1rem;
+    
+}
+.left{
+    overflow: hidden;
+    width: 100%;
+}
+.left img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background-size: cover;
+    
+}
+.right{
+    padding:3rem;
+
+}
+.right h4{
+     color:var(--DarkGrayishBlue);
+     font-weight: 500;
+}
+.right h1{
+    margin-top:2rem;
+    font-family: 'Fraunces';
+}
+.right p{
+    margin-top: 2rem;
+    color: var(--DarkGrayishBlue);
+}
+.right .price{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    
+    margin-top: 3rem;
+}
+.right .price h1{
+    margin: 0;
+    color:var(--DarkCyan);
+}
+.right .price h5{
+    color: var(--DarkGrayishBlue);
+    text-decoration: line-through;
+}
+.right .add{
+    color:white;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    background-color: var(--DarkCyan);
+}
+.right .add:hover{
+    background-color: hsl(158, 35%, 24%);
+}
+.add a{
+    display: flex;
+    padding: 1.6rem;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width:604px)
+{
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;     
+        width: 80%;
+        
+    }
+    .responsive-image {
+        content: url('./images/image-product-mobile.jpg');
+      }
+}
+    
+@media (min-width: 604px) {
+      .responsive-image {
+        content: url('./images/image-product-desktop.jpg');
+      }
+
+}
+
+
